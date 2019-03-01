@@ -1,0 +1,238 @@
+:root {
+        --v-blue : #3d9eff;
+  }
+body {
+    background-color: #f0f5f9;
+}
+.containers {
+    border: 1px solid var(--v-blue);
+    border-radius: 5px;
+}
+.title-bar {
+    background-color: var(--v-blue);
+    color: white;
+
+}
+.title-bar h5 {
+    font-size: 12px;
+}
+#search-bar {
+    width: 225px;
+    float: left;
+    height: 29px;
+    display: block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+#search-button {
+    background-color: var(--v-blue);
+    height: 29px;
+    color: white;
+    padding: 0 14px;
+    font-size: 12px;
+    cursor: pointer;
+ }
+
+img.repo-img {
+    width: 150px;
+      border-radius: 50%;
+}
+.result {
+    margin: 5px 0px;
+}
+.stars-details {
+  display: flex;
+    justify-content: space-around;
+    margin: 15px 0px;
+}
+span.star-detail {
+    border: 1px solid #c5c5c5;
+    border-radius: 11px;
+    padding: 1px 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.view-more-btn {
+      position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    padding: 10px 0px;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: black;
+
+}
+.view-more-text {
+      padding: 11px;
+    border-top: 1px solid #c5c5c5;
+     text-decoration: none;
+}
+.view-more-btn:hover {
+  background-color: var(--v-blue);
+}
+.view-more-btn:hover .view-more-text {
+  border: unset;
+}
+.pagination-container .btn{
+  background-color: var(--v-blue);
+  color : white;
+    margin-right: 10px;
+    height: 33px;
+    font-size: 13px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* padding & margin */
+.pt-2 {
+    padding-top: .5rem!important;
+}
+.pb-1 {
+    padding-bottom: .25rem!important;
+}
+.p-2 {
+    padding: .5rem!important;
+}
+.pb-3, .py-3 {
+    padding-bottom: 1rem!important;
+}
+.pt-3, .py-3 {
+    padding-top: 1rem!important;
+}
+
+ h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+     margin-top: 0;
+}
+.p-4 {
+    padding: 1.5rem!important;
+}
+.m-0 {
+    margin: 0;
+}
+.mb-2 {
+    margin-bottom: .5rem!important;
+}
+.mt-2 {
+    margin-top: .5rem!important;
+}
+.mr-4 {
+    margin-right: 1.5rem!important;
+}
+
+
+.h-100 {
+    height: 100%!important;
+}
+.bg-white {
+    background-color: #fff!important;
+}
+.text-center {
+    text-align: center;
+}
+
+/* button */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+/* flex */
+.flex-wrap {
+    -ms-flex-wrap: wrap!important;
+    flex-wrap: wrap!important;
+}
+
+/* response */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 576px) {
+    .col-sm-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.repo-card {
+    padding-bottom: 43px !important;
+    position: relative;
+}
