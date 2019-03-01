@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 import Card from "./components/Card";
 import Searchbar from "./components/Searchbar";
+import { connect } from "react-redux";
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       datas : [],
@@ -17,6 +18,7 @@ class App extends Component {
     this.goPrev = this.goPrev.bind(this);
 
     this.getDatas();
+    console.log(props.keyword)
   }
 
   getDatas() {
@@ -61,10 +63,16 @@ class App extends Component {
       }
   }
 
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (prevProps.keyword !== this.props.keyword) {
+            this.onSubmit(this.props.keyword)
+        }
+    }
+
   render() {
     return (
       <div id="main-container" className="container pt-2 pb-2">
-        <Searchbar keyword={this.state.keyword} onSubmit={(e) => this.onSubmit(e)}/>
+        <Searchbar keyword={this.state.keyword}/>
         <div className="row containers" id="result-container">
           <div className="col-12 title-bar pt-2 pb-1">
             <h5>Repo Search Result</h5>
@@ -86,5 +94,15 @@ class App extends Component {
     );
   }
 }
+const mapStateToProps = (state) => ({
+    keyword : state.keyword,
+});
 
-export default App;
+
+
+const AppContainer = connect(
+    mapStateToProps
+)(App);
+
+export default AppContainer;
+

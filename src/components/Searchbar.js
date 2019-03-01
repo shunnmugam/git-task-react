@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {searchUpdate} from "../redux/action";
+import {connect} from "react-redux";
 
 class Searchbar extends Component {
     constructor(props) {
@@ -21,7 +23,8 @@ class Searchbar extends Component {
      * on submit
      */
     onSubmit() {
-        this.props.onSubmit(this.state.keyword);
+        this.props.searchUpdate(this.state.keyword);
+        //this.props.onSubmit(this.state.keyword);
     }
 
     render() {
@@ -40,4 +43,18 @@ class Searchbar extends Component {
         );
     }
 }
-export default Searchbar;
+
+const mapStateToProps = state => ({
+    ...state.keyword,
+});
+
+const mapDispatchToProps = {
+    searchUpdate
+};
+
+const SearchbarContainer = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Searchbar);
+
+export default SearchbarContainer;
